@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria - Parejas</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal del juego -->
+    <div class="container">
+        <!-- Título del juego -->
+        <h1>🎮 Juego de Memoria</h1>
+        
+        <!-- Panel de estadísticas -->
+        <div class="stats">
+            <!-- Contador de intentos -->
+            <div class="stat-item">
+                <span class="stat-label">Intentos:</span>
+                <span id="attempts" class="stat-value">0</span>
+            </div>
+            
+            <!-- Contador de tiempo -->
+            <div class="stat-item">
+                <span class="stat-label">Tiempo:</span>
+                <span id="timer" class="stat-value">00:00</span>
+            </div>
+            
+            <!-- Contador de parejas encontradas -->
+            <div class="stat-item">
+                <span class="stat-label">Parejas:</span>
+                <span id="pairs" class="stat-value">0/8</span>
+            </div>
+        </div>
+        
+        <!-- Tablero del juego donde se mostrarán las cartas -->
+        <div id="game-board" class="game-board">
+            <!-- Las cartas se generarán dinámicamente con JavaScript -->
+        </div>
+        
+        <!-- Botón para reiniciar el juego -->
+        <button id="restart-btn" class="restart-btn">🔄 Reiniciar Juego</button>
+    </div>
+    
+    <!-- Modal de victoria (oculto inicialmente) -->
+    <div id="victory-modal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 ¡Felicitaciones!</h2>
+            <p>Has completado el juego</p>
+            <div class="modal-stats">
+                <p>⏱️ Tiempo: <span id="final-time"></span></p>
+                <p>🎯 Intentos: <span id="final-attempts"></span></p>
+            </div>
+            <button id="play-again-btn" class="play-again-btn">Jugar de Nuevo</button>
+        </div>
+    </div>
+    
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
